@@ -1,0 +1,149 @@
+/* Pengcheng Kitchenware UK Ltd - lightweight static site */
+:root{
+  --bg:#0b0f19;
+  --panel:#10162a;
+  --card:#0f172a;
+  --text:#e6eaf2;
+  --muted:#aab3c5;
+  --border:rgba(255,255,255,.10);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius:16px;
+  --max: 1100px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 20% -10%, rgba(120,119,198,.35), transparent 60%),
+              radial-gradient(900px 600px at 90% 10%, rgba(56,189,248,.20), transparent 55%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.55;
+}
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+.muted{color:var(--muted)}
+.small{font-size:.92rem}
+.lead{font-size:1.12rem;color:var(--muted);max-width:70ch}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:20px;top:12px;width:auto;height:auto;z-index:999;background:#fff;color:#000;padding:10px 12px;border-radius:10px}
+
+.site-header{
+  position:sticky;top:0;z-index:30;
+  background:rgba(11,15,25,.75);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{display:flex;gap:14px;align-items:center;justify-content:space-between;min-height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-name{font-weight:650;letter-spacing:.2px}
+.logo{display:block}
+.nav{display:flex;gap:14px;align-items:center}
+.nav a{
+  text-decoration:none;
+  color:var(--muted);
+  padding:10px 10px;
+  border-radius:10px;
+}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+.nav a.active{color:var(--text);background:rgba(255,255,255,.10)}
+.nav-cta{border:1px solid var(--border)}
+.nav-toggle{display:none}
+
+.hero{padding:64px 0 36px}
+.hero-grid{display:grid;grid-template-columns: 1.3fr 1fr;gap:26px;align-items:stretch}
+h1{font-size:2.15rem;line-height:1.15;margin:0 0 14px}
+h2{font-size:1.6rem;margin:0 0 10px}
+h3{font-size:1.15rem;margin:0 0 8px}
+
+.hero-card{
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
+}
+.hero-card-top{padding-bottom:10px;border-bottom:1px solid var(--border);margin-bottom:12px}
+.badge{
+  display:inline-block;
+  font-size:.82rem;
+  padding:6px 10px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+.hero-card-list{display:grid;gap:10px}
+.check{padding-left:26px; position:relative; color:var(--muted)}
+.check::before{content:"✓";position:absolute;left:0;top:0;color:#7ee787;font-weight:800}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 12px}
+.button{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 14px;border-radius:12px;text-decoration:none;
+  border:1px solid var(--border);background:rgba(255,255,255,.06);
+  color:var(--text);font-weight:600;
+}
+.button:hover{background:rgba(255,255,255,.10)}
+.button.primary{background:linear-gradient(180deg, rgba(56,189,248,.25), rgba(56,189,248,.12));border-color:rgba(56,189,248,.35)}
+.button.ghost{background:transparent}
+.hero-contact{display:flex;flex-wrap:wrap;gap:10px}
+.pill{border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 10px;color:var(--muted);font-size:.95rem}
+
+.trust-row{display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;margin-top:16px}
+.trust-item{border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(255,255,255,.03)}
+
+.section{padding:42px 0}
+.section.alt{background:rgba(255,255,255,.03);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.section-header{margin-bottom:16px;max-width:80ch}
+.card{border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,.03);box-shadow:var(--shadow);padding:18px}
+.grid-2{display:grid;grid-template-columns:repeat(2, 1fr);gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px}
+
+.steps{display:grid;grid-template-columns:repeat(3, 1fr);gap:14px}
+.step{border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,.03);padding:14px;display:flex;gap:12px;align-items:flex-start}
+.step-no{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);background:rgba(255,255,255,.06);font-weight:800}
+
+.cta-panel{
+  margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:16px 18px;border-radius:var(--radius);
+  border:1px solid rgba(56,189,248,.28);background:rgba(56,189,248,.08);
+}
+.page-hero{padding:48px 0 18px}
+.mini-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.clean-list{margin:10px 0 0 18px;color:var(--muted)}
+.workflow{color:var(--muted);margin:10px 0 0 20px}
+.note{margin-top:14px;padding:14px 16px;border:1px dashed rgba(255,255,255,.20);border-radius:var(--radius);color:var(--muted)}
+.kv{display:grid;grid-template-columns: 170px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
+.kv:last-child{border-bottom:none}
+.kv span{color:var(--muted)}
+.divider{height:1px;background:var(--border);margin:14px 0}
+.principles{display:grid;gap:12px;margin-top:10px}
+.principles div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--border);padding:10px 0}
+.principles div:last-child{border-bottom:none}
+.form{display:grid;gap:12px;margin-top:12px}
+label{display:grid;gap:6px;color:var(--muted);font-weight:600}
+input, textarea{width:100%;border-radius:12px;border:1px solid var(--border);padding:12px;background:rgba(255,255,255,.04);color:var(--text);outline:none}
+input:focus, textarea:focus{border-color:rgba(56,189,248,.45)}
+.contact-block{margin-top:12px}
+
+.site-footer{border-top:1px solid var(--border);background:rgba(0,0,0,.18);padding:28px 0 18px}
+.footer-grid{display:grid;grid-template-columns: 1.5fr 1fr 1fr;gap:16px}
+.footer-title{font-weight:700;margin-bottom:10px}
+.footer-brand{font-weight:800;font-size:1.05rem;margin-bottom:6px}
+.footer-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.footer-list a{text-decoration:none;color:var(--muted)}
+.footer-list a:hover{color:var(--text)}
+.footer-bottom{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width: 920px){
+  .hero-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .trust-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+  .nav.open{display:flex;position:absolute;right:20px;top:66px;flex-direction:column;background:rgba(11,15,25,.96);border:1px solid var(--border);border-radius:14px;padding:10px;min-width:220px}
+}
