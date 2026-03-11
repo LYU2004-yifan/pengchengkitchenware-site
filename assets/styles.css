@@ -1,11 +1,11 @@
 /* Pengcheng Kitchenware UK Ltd - lightweight static site */
 :root{
-  --bg:#0b0f19;
+  --bg:#f7f8fb;
   --panel:#10162a;
   --card:#0f172a;
-  --text:#e6eaf2;
-  --muted:#aab3c5;
-  --border:rgba(255,255,255,.10);
+  --text:#0f172a;
+  --muted:#475569;
+  --border:rgba(15,23,42,.10);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius:16px;
   --max: 1100px;
@@ -31,7 +31,7 @@ a:hover{opacity:.9}
 
 .site-header{
   position:sticky;top:0;z-index:30;
-  background:rgba(255,255,255,.78);
+  background:rgba(255,255,255,.85);
   backdrop-filter: blur(12px);
   border-bottom:1px solid var(--border);
 }
@@ -82,9 +82,9 @@ h3{font-size:1.15rem;margin:0 0 8px}
 }
 .button:hover{background:rgba(255,255,255,.10)}
 .button.primary{
-  background: var(--accent);
-  border-color: rgba(37,99,235,.35);
-  color: #fff;
+  background:#2563eb;
+  border-color:rgba(37,99,235,.35);
+  color:#fff;
 }
 .button.primary:hover{ filter: brightness(.98); }
 .button{ background: rgba(15,23,42,.04); border:1px solid var(--border); color: var(--text); }
