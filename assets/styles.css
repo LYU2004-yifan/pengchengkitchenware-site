@@ -124,9 +124,34 @@ h3{font-size:1.15rem;margin:0 0 8px}
 .grid-3{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px}
 
 .steps{display:grid;grid-template-columns:repeat(3, 1fr);gap:14px}
-.step{border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,.03);padding:14px;display:flex;gap:12px;align-items:flex-start}
-.step-no{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);background:rgba(255,255,255,.06);font-weight:800}
+/* Step cards - soft, coordinated colors */
+.step{
+  background: rgba(255,255,255,.88);
+  border:1px solid var(--border);
+}
 
+/* per-card tint */
+.step.step-a{ background: rgba(37,99,235,.06); border-color: rgba(37,99,235,.16); }
+.step.step-b{ background: rgba(16,185,129,.06); border-color: rgba(16,185,129,.16); }
+.step.step-c{ background: rgba(14,165,233,.06); border-color: rgba(14,165,233,.16); }
+.step.step-d{ background: rgba(99,102,241,.06); border-color: rgba(99,102,241,.16); }
+.step.step-e{ background: rgba(245,158,11,.06); border-color: rgba(245,158,11,.18); }
+.step.step-f{ background: rgba(148,163,184,.14); border-color: rgba(148,163,184,.28); }
+
+/* number badge inside each step */
+.step-no{
+  background: rgba(255,255,255,.65);
+  border:1px solid rgba(15,23,42,.12);
+}
+
+/* make the number badge match each card */
+.step.step-a .step-no{ border-color: rgba(37,99,235,.28); color: rgb(37,99,235); }
+.step.step-b .step-no{ border-color: rgba(16,185,129,.28); color: rgb(16,185,129); }
+.step.step-c .step-no{ border-color: rgba(14,165,233,.28); color: rgb(14,165,233); }
+.step.step-d .step-no{ border-color: rgba(99,102,241,.28); color: rgb(99,102,241); }
+.step.step-e .step-no{ border-color: rgba(245,158,11,.30); color: rgb(245,158,11); }
+.step.step-f .step-no{ border-color: rgba(148,163,184,.45); color: rgb(71,85,105); }
+.step-no{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);background:rgba(255,255,255,.06);font-weight:800}
 .cta-panel{
   margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;
   padding:16px 18px;border-radius:var(--radius);
