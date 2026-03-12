@@ -235,7 +235,3 @@ input:focus, textarea:focus{border-color:rgba(56,189,248,.45)}
   .stats-grid{ grid-template-columns:1fr; text-align:left; }
   .stat-num{ font-size: 2.4rem; }
 }
-/* Force remove any stripe/repeating backgrounds */
-html, body, main, header, section, .section, .hero {
-  background-image: none !important;
-}
