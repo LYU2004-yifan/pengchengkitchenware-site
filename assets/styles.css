@@ -15,7 +15,7 @@
 
   /* 蓝色强调 */
   --accent:#2563eb;             /* 主蓝 */
-  --accent-soft:rgba(37,99,235,.14);
+  --accent-soft:rgba(37,99,235,.14);x
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -194,4 +194,44 @@ input:focus, textarea:focus{border-color:rgba(56,189,248,.45)}
   .nav{display:none}
   .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
   .nav.open{display:flex;position:absolute;right:20px;top:66px;flex-direction:column;background:rgba(11,15,25,.96);border:1px solid var(--border);border-radius:14px;padding:10px;min-width:220px}
+}
+/* Stats band (big numbers) */
+.stats-band{
+  padding: 46px 0;
+  background: linear-gradient(90deg,
+    rgba(37,99,235,.92),
+    rgba(14,165,233,.86)
+  );
+  border-top: 1px solid rgba(255,255,255,.20);
+  border-bottom: 1px solid rgba(255,255,255,.20);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items:center;
+}
+
+.stat{
+  padding: 14px 6px;
+}
+
+.stat-num{
+  font-size: 3.0rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.stat-label{
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.92);
+}
+
+@media (max-width: 920px){
+  .stats-grid{ grid-template-columns:1fr; text-align:left; }
+  .stat-num{ font-size: 2.4rem; }
 }
